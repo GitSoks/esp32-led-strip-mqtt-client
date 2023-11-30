@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  esp32ledstripmqttclient:
+    image: esp32ledstripmqttclient
+    build:
+      context: .
+      dockerfile: ./Dockerfile

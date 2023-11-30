@@ -1,0 +1,20 @@
+{
+  "C_Cpp.intelliSenseEngine": "default",
+  "idf.portWin": "COM3",
+  "idf.flashType": "UART",
+  "idf.adapterTargetName": "esp32",
+  "idf.openOcdConfigs": [
+    "board/esp32-wrover-kit-3.3v.cfg"
+  ],
+  "files.associations": {
+    "led_strip.h": "c"
+  },
+  "vsmqtt.brokerProfiles": [
+    {
+      "name": "local_mqtt_broker",
+      "host": "localhost",
+      "port": 1883,
+      "clientId": "vsmqtt_client_4737"
+    }
+  ]
+}
