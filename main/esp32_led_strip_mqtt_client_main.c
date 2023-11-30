@@ -53,7 +53,7 @@ void app_main(void)
     led_strip_handle_t led_strip = configure_led();
     bool led_on_off = false;
 
-    ESP_LOGI(TAG, "Start blinking LED strip");
+    ESP_LOGI(TAG, "Start blinking LED strip ");
     while (1) {
 
         for(int i = 0; i < 9; i++){  
