@@ -24,7 +24,7 @@ events:
       The output was:
       0
       MSBuild version 17.7.2+d6990bcfa for .NET Framework
-      Build started 30.11.2023 09:46:49.
+      Build started 30.11.2023 17:04:08.
       
       Project "C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\3.26.4-msvc4\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
       PrepareForBuild:
@@ -52,7 +52,7 @@ events:
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:01.68
+      Time Elapsed 00:00:01.00
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -78,7 +78,7 @@ events:
       The output was:
       0
       MSBuild version 17.7.2+d6990bcfa for .NET Framework
-      Build started 30.11.2023 09:46:54.
+      Build started 30.11.2023 17:04:10.
       
       Project "C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\3.26.4-msvc4\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
       PrepareForBuild:
@@ -106,7 +106,7 @@ events:
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:00.80
+      Time Elapsed 00:00:00.77
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -125,8 +125,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-uszyvz"
-      binary: "C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-uszyvz"
+      source: "C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-su2vfj"
+      binary: "C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-su2vfj"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -135,38 +135,38 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-uszyvz
+        Change Dir: C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-su2vfj
         
-        Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_0b421.vcxproj /p:Configuration=Debug /p:Platform=win32 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.7.2+d6990bcfa for .NET Framework
-        Build started 30.11.2023 09:46:55.
+        Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_ec714.vcxproj /p:Configuration=Debug /p:Platform=win32 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.7.2+d6990bcfa for .NET Framework
+        Build started 30.11.2023 17:04:11.
         
-        Project "C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-uszyvz\\cmTC_0b421.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-su2vfj\\cmTC_ec714.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_0b421.dir\\Debug\\".
-          Creating directory "C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-uszyvz\\Debug\\".
-          Creating directory "cmTC_0b421.dir\\Debug\\cmTC_0b421.tlog\\".
+          Creating directory "cmTC_ec714.dir\\Debug\\".
+          Creating directory "C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-su2vfj\\Debug\\".
+          Creating directory "cmTC_ec714.dir\\Debug\\cmTC_ec714.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_0b421.dir\\Debug\\cmTC_0b421.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_0b421.dir\\Debug\\cmTC_0b421.tlog\\unsuccessfulbuild".
+          Creating "cmTC_ec714.dir\\Debug\\cmTC_ec714.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_ec714.dir\\Debug\\cmTC_ec714.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX86\\x86\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_0b421.dir\\Debug\\\\" /Fd"cmTC_0b421.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /analyze- /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.26\\Modules\\CMakeCCompilerABI.c"
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX86\\x86\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ec714.dir\\Debug\\\\" /Fd"cmTC_ec714.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /analyze- /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.26\\Modules\\CMakeCCompilerABI.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.37.32825 for x86
           CMakeCCompilerABI.c
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_0b421.dir\\Debug\\\\" /Fd"cmTC_0b421.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /analyze- /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.26\\Modules\\CMakeCCompilerABI.c"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ec714.dir\\Debug\\\\" /Fd"cmTC_ec714.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /analyze- /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.26\\Modules\\CMakeCCompilerABI.c"
         Link:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX86\\x86\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-uszyvz\\Debug\\cmTC_0b421.exe" /INCREMENTAL /ILK:"cmTC_0b421.dir\\Debug\\cmTC_0b421.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-uszyvz/Debug/cmTC_0b421.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-uszyvz/Debug/cmTC_0b421.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_0b421.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_0b421.vcxproj -> C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-uszyvz\\Debug\\cmTC_0b421.exe
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX86\\x86\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-su2vfj\\Debug\\cmTC_ec714.exe" /INCREMENTAL /ILK:"cmTC_ec714.dir\\Debug\\cmTC_ec714.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-su2vfj/Debug/cmTC_ec714.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-su2vfj/Debug/cmTC_ec714.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_ec714.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_ec714.vcxproj -> C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-su2vfj\\Debug\\cmTC_ec714.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_0b421.dir\\Debug\\cmTC_0b421.tlog\\unsuccessfulbuild".
-          Touching "cmTC_0b421.dir\\Debug\\cmTC_0b421.tlog\\cmTC_0b421.lastbuildstate".
-        Done Building Project "C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-uszyvz\\cmTC_0b421.vcxproj" (default targets).
+          Deleting file "cmTC_ec714.dir\\Debug\\cmTC_ec714.tlog\\unsuccessfulbuild".
+          Touching "cmTC_ec714.dir\\Debug\\cmTC_ec714.tlog\\cmTC_ec714.lastbuildstate".
+        Done Building Project "C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-su2vfj\\cmTC_ec714.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:01.05
+        Time Elapsed 00:00:01.09
         
       exitCode: 0
   -
@@ -178,8 +178,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-2ykurq"
-      binary: "C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-2ykurq"
+      source: "C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-hrmkv8"
+      binary: "C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-hrmkv8"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -188,38 +188,38 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-2ykurq
+        Change Dir: C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-hrmkv8
         
-        Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_5f5ab.vcxproj /p:Configuration=Debug /p:Platform=win32 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.7.2+d6990bcfa for .NET Framework
-        Build started 30.11.2023 09:46:56.
+        Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_18106.vcxproj /p:Configuration=Debug /p:Platform=win32 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.7.2+d6990bcfa for .NET Framework
+        Build started 30.11.2023 17:04:12.
         
-        Project "C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2ykurq\\cmTC_5f5ab.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-hrmkv8\\cmTC_18106.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_5f5ab.dir\\Debug\\".
-          Creating directory "C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2ykurq\\Debug\\".
-          Creating directory "cmTC_5f5ab.dir\\Debug\\cmTC_5f5ab.tlog\\".
+          Creating directory "cmTC_18106.dir\\Debug\\".
+          Creating directory "C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-hrmkv8\\Debug\\".
+          Creating directory "cmTC_18106.dir\\Debug\\cmTC_18106.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_5f5ab.dir\\Debug\\cmTC_5f5ab.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_5f5ab.dir\\Debug\\cmTC_5f5ab.tlog\\unsuccessfulbuild".
+          Creating "cmTC_18106.dir\\Debug\\cmTC_18106.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_18106.dir\\Debug\\cmTC_18106.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX86\\x86\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_5f5ab.dir\\Debug\\\\" /Fd"cmTC_5f5ab.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /analyze- /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.26\\Modules\\CMakeCXXCompilerABI.cpp"
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX86\\x86\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_18106.dir\\Debug\\\\" /Fd"cmTC_18106.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /analyze- /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.26\\Modules\\CMakeCXXCompilerABI.cpp"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.37.32825 for x86
-          Copyright (C) Microsoft Corporation.  All rights reserved.
           CMakeCXXCompilerABI.cpp
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_5f5ab.dir\\Debug\\\\" /Fd"cmTC_5f5ab.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /analyze- /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.26\\Modules\\CMakeCXXCompilerABI.cpp"
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_18106.dir\\Debug\\\\" /Fd"cmTC_18106.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /analyze- /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.26\\Modules\\CMakeCXXCompilerABI.cpp"
         Link:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX86\\x86\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2ykurq\\Debug\\cmTC_5f5ab.exe" /INCREMENTAL /ILK:"cmTC_5f5ab.dir\\Debug\\cmTC_5f5ab.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-2ykurq/Debug/cmTC_5f5ab.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-2ykurq/Debug/cmTC_5f5ab.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_5f5ab.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_5f5ab.vcxproj -> C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2ykurq\\Debug\\cmTC_5f5ab.exe
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX86\\x86\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-hrmkv8\\Debug\\cmTC_18106.exe" /INCREMENTAL /ILK:"cmTC_18106.dir\\Debug\\cmTC_18106.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-hrmkv8/Debug/cmTC_18106.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-hrmkv8/Debug/cmTC_18106.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_18106.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_18106.vcxproj -> C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-hrmkv8\\Debug\\cmTC_18106.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_5f5ab.dir\\Debug\\cmTC_5f5ab.tlog\\unsuccessfulbuild".
-          Touching "cmTC_5f5ab.dir\\Debug\\cmTC_5f5ab.tlog\\cmTC_5f5ab.lastbuildstate".
-        Done Building Project "C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2ykurq\\cmTC_5f5ab.vcxproj" (default targets).
+          Deleting file "cmTC_18106.dir\\Debug\\cmTC_18106.tlog\\unsuccessfulbuild".
+          Touching "cmTC_18106.dir\\Debug\\cmTC_18106.tlog\\cmTC_18106.lastbuildstate".
+        Done Building Project "C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-hrmkv8\\cmTC_18106.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.75
+        Time Elapsed 00:00:00.81
         
       exitCode: 0
 ...
@@ -249,7 +249,7 @@ events:
       The output was:
       0
       MSBuild version 17.7.2+d6990bcfa for .NET Framework
-      Build started 30.11.2023 16:34:26.
+      Build started 30.11.2023 17:12:01.
       
       Project "C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\3.26.4-msvc4\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
       PrepareForBuild:
@@ -277,7 +277,7 @@ events:
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:01.04
+      Time Elapsed 00:00:00.91
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -303,7 +303,7 @@ events:
       The output was:
       0
       MSBuild version 17.7.2+d6990bcfa for .NET Framework
-      Build started 30.11.2023 16:34:28.
+      Build started 30.11.2023 17:12:02.
       
       Project "C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\3.26.4-msvc4\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
       PrepareForBuild:
@@ -331,7 +331,7 @@ events:
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:00.82
+      Time Elapsed 00:00:00.73
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -350,8 +350,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-bnlu3w"
-      binary: "C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-bnlu3w"
+      source: "C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-pdn7xf"
+      binary: "C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-pdn7xf"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -360,38 +360,38 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-bnlu3w
+        Change Dir: C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-pdn7xf
         
-        Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_31a5a.vcxproj /p:Configuration=Debug /p:Platform=win32 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.7.2+d6990bcfa for .NET Framework
-        Build started 30.11.2023 16:34:29.
+        Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_8af89.vcxproj /p:Configuration=Debug /p:Platform=win32 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.7.2+d6990bcfa for .NET Framework
+        Build started 30.11.2023 17:12:03.
         
-        Project "C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bnlu3w\\cmTC_31a5a.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pdn7xf\\cmTC_8af89.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_31a5a.dir\\Debug\\".
-          Creating directory "C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bnlu3w\\Debug\\".
-          Creating directory "cmTC_31a5a.dir\\Debug\\cmTC_31a5a.tlog\\".
+          Creating directory "cmTC_8af89.dir\\Debug\\".
+          Creating directory "C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pdn7xf\\Debug\\".
+          Creating directory "cmTC_8af89.dir\\Debug\\cmTC_8af89.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_31a5a.dir\\Debug\\cmTC_31a5a.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_31a5a.dir\\Debug\\cmTC_31a5a.tlog\\unsuccessfulbuild".
+          Creating "cmTC_8af89.dir\\Debug\\cmTC_8af89.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_8af89.dir\\Debug\\cmTC_8af89.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX86\\x86\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_31a5a.dir\\Debug\\\\" /Fd"cmTC_31a5a.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /analyze- /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.26\\Modules\\CMakeCCompilerABI.c"
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX86\\x86\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8af89.dir\\Debug\\\\" /Fd"cmTC_8af89.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /analyze- /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.26\\Modules\\CMakeCCompilerABI.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.37.32825 for x86
           CMakeCCompilerABI.c
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_31a5a.dir\\Debug\\\\" /Fd"cmTC_31a5a.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /analyze- /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.26\\Modules\\CMakeCCompilerABI.c"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8af89.dir\\Debug\\\\" /Fd"cmTC_8af89.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /analyze- /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.26\\Modules\\CMakeCCompilerABI.c"
         Link:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX86\\x86\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bnlu3w\\Debug\\cmTC_31a5a.exe" /INCREMENTAL /ILK:"cmTC_31a5a.dir\\Debug\\cmTC_31a5a.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-bnlu3w/Debug/cmTC_31a5a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-bnlu3w/Debug/cmTC_31a5a.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_31a5a.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_31a5a.vcxproj -> C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bnlu3w\\Debug\\cmTC_31a5a.exe
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX86\\x86\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pdn7xf\\Debug\\cmTC_8af89.exe" /INCREMENTAL /ILK:"cmTC_8af89.dir\\Debug\\cmTC_8af89.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-pdn7xf/Debug/cmTC_8af89.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-pdn7xf/Debug/cmTC_8af89.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_8af89.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_8af89.vcxproj -> C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pdn7xf\\Debug\\cmTC_8af89.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_31a5a.dir\\Debug\\cmTC_31a5a.tlog\\unsuccessfulbuild".
-          Touching "cmTC_31a5a.dir\\Debug\\cmTC_31a5a.tlog\\cmTC_31a5a.lastbuildstate".
-        Done Building Project "C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bnlu3w\\cmTC_31a5a.vcxproj" (default targets).
+          Deleting file "cmTC_8af89.dir\\Debug\\cmTC_8af89.tlog\\unsuccessfulbuild".
+          Touching "cmTC_8af89.dir\\Debug\\cmTC_8af89.tlog\\cmTC_8af89.lastbuildstate".
+        Done Building Project "C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pdn7xf\\cmTC_8af89.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:01.04
+        Time Elapsed 00:00:00.88
         
       exitCode: 0
   -
@@ -403,8 +403,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-qq44pm"
-      binary: "C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-qq44pm"
+      source: "C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-cjc8jz"
+      binary: "C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-cjc8jz"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -413,38 +413,38 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-qq44pm
+        Change Dir: C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-cjc8jz
         
-        Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_a3579.vcxproj /p:Configuration=Debug /p:Platform=win32 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.7.2+d6990bcfa for .NET Framework
-        Build started 30.11.2023 16:34:31.
+        Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_c3e42.vcxproj /p:Configuration=Debug /p:Platform=win32 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.7.2+d6990bcfa for .NET Framework
+        Build started 30.11.2023 17:12:04.
         
-        Project "C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qq44pm\\cmTC_a3579.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cjc8jz\\cmTC_c3e42.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_a3579.dir\\Debug\\".
-          Creating directory "C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qq44pm\\Debug\\".
-          Creating directory "cmTC_a3579.dir\\Debug\\cmTC_a3579.tlog\\".
+          Creating directory "cmTC_c3e42.dir\\Debug\\".
+          Creating directory "C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cjc8jz\\Debug\\".
+          Creating directory "cmTC_c3e42.dir\\Debug\\cmTC_c3e42.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_a3579.dir\\Debug\\cmTC_a3579.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_a3579.dir\\Debug\\cmTC_a3579.tlog\\unsuccessfulbuild".
+          Creating "cmTC_c3e42.dir\\Debug\\cmTC_c3e42.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_c3e42.dir\\Debug\\cmTC_c3e42.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX86\\x86\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_a3579.dir\\Debug\\\\" /Fd"cmTC_a3579.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /analyze- /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.26\\Modules\\CMakeCXXCompilerABI.cpp"
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX86\\x86\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_c3e42.dir\\Debug\\\\" /Fd"cmTC_c3e42.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /analyze- /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.26\\Modules\\CMakeCXXCompilerABI.cpp"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.37.32825 for x86
           CMakeCXXCompilerABI.cpp
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_a3579.dir\\Debug\\\\" /Fd"cmTC_a3579.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /analyze- /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.26\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_c3e42.dir\\Debug\\\\" /Fd"cmTC_c3e42.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /analyze- /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.26\\Modules\\CMakeCXXCompilerABI.cpp"
         Link:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX86\\x86\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qq44pm\\Debug\\cmTC_a3579.exe" /INCREMENTAL /ILK:"cmTC_a3579.dir\\Debug\\cmTC_a3579.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-qq44pm/Debug/cmTC_a3579.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-qq44pm/Debug/cmTC_a3579.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_a3579.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_a3579.vcxproj -> C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qq44pm\\Debug\\cmTC_a3579.exe
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX86\\x86\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cjc8jz\\Debug\\cmTC_c3e42.exe" /INCREMENTAL /ILK:"cmTC_c3e42.dir\\Debug\\cmTC_c3e42.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-cjc8jz/Debug/cmTC_c3e42.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build/CMakeFiles/CMakeScratch/TryCompile-cjc8jz/Debug/cmTC_c3e42.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_c3e42.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_c3e42.vcxproj -> C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cjc8jz\\Debug\\cmTC_c3e42.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_a3579.dir\\Debug\\cmTC_a3579.tlog\\unsuccessfulbuild".
-          Touching "cmTC_a3579.dir\\Debug\\cmTC_a3579.tlog\\cmTC_a3579.lastbuildstate".
-        Done Building Project "C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qq44pm\\cmTC_a3579.vcxproj" (default targets).
+          Deleting file "cmTC_c3e42.dir\\Debug\\cmTC_c3e42.tlog\\unsuccessfulbuild".
+          Touching "cmTC_c3e42.dir\\Debug\\cmTC_c3e42.tlog\\cmTC_c3e42.lastbuildstate".
+        Done Building Project "C:\\Users\\David\\Nextcloud\\7 - FH Technikum Wien\\Bachlorarbeit\\esp32\\esp32_led_strip_mqtt_client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cjc8jz\\cmTC_c3e42.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.71
+        Time Elapsed 00:00:00.78
         
       exitCode: 0
 ...

@@ -1,7 +1,7 @@
 {
     "version":            "1",
     "project_name":       "esp32_led_strip_mqtt_client",
-    "project_version":    "a272b03-dirty",
+    "project_version":    "32d2aaf-dirty",
     "project_path":       "C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client",
     "idf_path":           "C:/Users/David/esp/esp-idf",
     "build_dir":          "C:/Users/David/Nextcloud/7 - FH Technikum Wien/Bachlorarbeit/esp32/esp32_led_strip_mqtt_client/build",

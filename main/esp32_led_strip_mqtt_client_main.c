@@ -83,7 +83,6 @@ void app_main(void)
 
             led_on_off = !led_on_off;
             vTaskDelay(pdMS_TO_TICKS(200));
-
         }
         for (int i = 0; i < LED_STRIP_LED_NUMBERS; i++) {
             ESP_ERROR_CHECK(led_strip_set_pixel(led_strip, i, 0, 0, 70));
