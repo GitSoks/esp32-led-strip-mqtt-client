@@ -7,7 +7,12 @@
     "board/esp32-wrover-kit-3.3v.cfg"
   ],
   "files.associations": {
-    "led_strip.h": "c"
+    "led_strip.h": "c",
+    "freertos.h": "c",
+    "esp_err.h": "c",
+    "protocol_examples_common.h": "c",
+    "thread": "c",
+    "xlocale": "c"
   },
   "vsmqtt.brokerProfiles": [
     {
