@@ -1,2 +1,2 @@
-idf_component_register(SRCS "esp32_led_strip_mqtt_client_main.c"
-                    INCLUDE_DIRS "")
+idf_component_register(SRCS "led_handler.c" "wifi_handler.c" "mqtt_handler.c" "main.c" 
+                    INCLUDE_DIRS "include")

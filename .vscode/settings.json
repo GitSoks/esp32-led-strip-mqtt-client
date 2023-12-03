@@ -12,7 +12,9 @@
     "esp_err.h": "c",
     "protocol_examples_common.h": "c",
     "thread": "c",
-    "xlocale": "c"
+    "xlocale": "c",
+    "sockets.h": "c",
+    "err.h": "c"
   },
   "vsmqtt.brokerProfiles": [
     {

@@ -1,14 +1,6 @@
-menu "Example Configuration"
+menu "WIFI Configuration"
 
-    config BROKER_URL
-        string "Broker URL"
-        default "mqtt://mqtt.eclipseprojects.io"
-        help
-            URL of the broker to connect to
 
-    config BROKER_URL_FROM_STDIN
-        bool
-        default y if BROKER_URL = "FROM_STDIN"
 
     config ESP_WIFI_SSID
         string "WiFi SSID"
@@ -73,5 +65,85 @@ menu "Example Configuration"
         config ESP_WIFI_AUTH_WAPI_PSK
             bool "WAPI PSK"
     endchoice
+
+endmenu
+
+menu "MQTT Configuration"
+
+    config BROKER_URL
+        string "Broker URL"
+        default "mqtt://192.168.1.10"
+        help
+            URL of the broker to connect to
+
+    config BROKER_URL_FROM_STDIN
+        bool
+        default y if BROKER_URL = "FROM_STDIN"
+
+
+    config MQTT_TOPIC_MAIN
+        string "set the MQTT main topic"
+        default "test"
+        help
+            The main topic for the MQTT messages
+
+    config MQTT_TOPIC_LED
+        string "set the MQTT led topic (main_topic/leds_topic)"
+        default "leds"
+        help
+            The led topic for the MQTT messages
+    config MQTT_TOPIC_LED_STATE
+            string "set the MQTT led state topic (main_topic/leds_topic/state_topic)"
+            default "state"
+            help
+                The led state topic for the MQTT messages
+
+    config MQTT_TOPIC_LED_COMMAND
+        string "set the MQTT led command topic (main_topic/leds_topic/comand_topic)"
+        default "command"
+        help
+            The led command topic for the MQTT messages
+
+
+
+
+endmenu
+
+
+
+menu "LED Strip/Ring Configuration"
+
+    config LED_GPIO
+        int "LED GPIO"
+        default 22
+        help
+            Set the GPIO pin for the LED strip/ring.
+
+    config LED_COUNT
+        int "LED Count"
+        default 12
+        help
+            Set the number of LEDs in the strip/ring.
+
+    config LED_RMT_RES_HZ
+        int "LED RMT Resolution (Hz)  10MHz resolution, 1 tick = 0.1us, default = (10 * 700 * 700)"
+        default 4900000
+        help
+            10MHz resolution, 1 tick = 0.1us (led strip needs a high resolution) default = (10 * 700 * 700)
+
+            
+    choice LED_MODEL_TYPE_CHOICE
+        prompt "LED Model Type"
+        default LED_MODEL_WS2812
+        help
+            Set the LED model type.
+
+        config LED_MODEL_WS2812
+            bool "WS2812"
+        config LED_MODEL_SK6812
+            bool "SK6812"
+
+    endchoice
+
 
 endmenu
