@@ -1,29 +1,42 @@
-#include <stdio.h>
-#include <stdint.h>
-#include <stddef.h>
-#include <string.h>
+/**
+ * @file wifi_handler.c
+ * @brief Wi-Fi handler module for ESP32.
+ *
+ * This module provides functions to initialize and handle Wi-Fi connection in station mode.
+ * It uses the ESP32 Wi-Fi library and FreeRTOS real-time operating system.
+ *
+ * The module includes Wi-Fi configuration parameters, event handlers, and functions to connect to a Wi-Fi access point.
+ * It also defines event bits for Wi-Fi connection status and provides a function to initialize the Wi-Fi station mode.
+ */
 
-#include "esp_wifi.h"
-#include "esp_system.h"
-#include "nvs_flash.h"
-#include "esp_event.h"
-#include "esp_netif.h"
+#include <stdio.h>  // Standard input/output functions
+#include <stdint.h> // Standard integer types
+#include <stddef.h> // Standard definitions
+#include <string.h> // String manipulation functions
 
-#include "freertos/FreeRTOS.h"
-#include "freertos/task.h"
-#include "freertos/semphr.h"
-#include "freertos/queue.h"
-#include "freertos/event_groups.h"
+#include "esp_wifi.h"   // ESP32 Wi-Fi library
+#include "esp_system.h" // ESP32 system functions
+#include "nvs_flash.h"  // Non-volatile storage (NVS) flash functions
+#include "esp_event.h"  // ESP32 event loop library
+#include "esp_netif.h"  // ESP32 network interface functions
 
-#include "esp_log.h"
-#include "esp_err.h"
+#include "freertos/FreeRTOS.h"     // FreeRTOS real-time operating system
+#include "freertos/task.h"         // FreeRTOS task functions
+#include "freertos/semphr.h"       // FreeRTOS semaphore functions
+#include "freertos/queue.h"        // FreeRTOS queue functions
+#include "freertos/event_groups.h" // FreeRTOS event group functions
+
+#include "esp_log.h" // ESP32 logging library
+#include "esp_err.h" // ESP32 error codes
 
 static const char *TAG = "WIFI_HANDLER";
 
+// Wi-Fi configuration parameters
 #define EXAMPLE_ESP_WIFI_SSID CONFIG_ESP_WIFI_SSID
 #define EXAMPLE_ESP_WIFI_PASS CONFIG_ESP_WIFI_PASSWORD
 #define EXAMPLE_ESP_MAXIMUM_RETRY CONFIG_ESP_MAXIMUM_RETRY
 
+// Wi-Fi security modes
 #if CONFIG_ESP_WPA3_SAE_PWE_HUNT_AND_PECK
 #define ESP_WIFI_SAE_MODE WPA3_SAE_PWE_HUNT_AND_PECK
 #define EXAMPLE_H2E_IDENTIFIER ""
@@ -34,6 +47,8 @@ static const char *TAG = "WIFI_HANDLER";
 #define ESP_WIFI_SAE_MODE WPA3_SAE_PWE_BOTH
 #define EXAMPLE_H2E_IDENTIFIER CONFIG_ESP_WIFI_PW_ID
 #endif
+
+// Wi-Fi authentication modes
 #if CONFIG_ESP_WIFI_AUTH_OPEN
 #define ESP_WIFI_SCAN_AUTH_MODE_THRESHOLD WIFI_AUTH_OPEN
 #elif CONFIG_ESP_WIFI_AUTH_WEP
@@ -52,17 +67,16 @@ static const char *TAG = "WIFI_HANDLER";
 #define ESP_WIFI_SCAN_AUTH_MODE_THRESHOLD WIFI_AUTH_WAPI_PSK
 #endif
 
-/* FreeRTOS event group to signal when we are connected*/
+// FreeRTOS event group to signal Wi-Fi connection status
 static EventGroupHandle_t s_wifi_event_group;
 
-/* The event group allows multiple bits for each event, but we only care about two events:
- * - we are connected to the AP with an IP
- * - we failed to connect after the maximum amount of retries */
+// Event bits for Wi-Fi connection status
 #define WIFI_CONNECTED_BIT BIT0
 #define WIFI_FAIL_BIT BIT1
 
 static int s_retry_num = 0;
 
+// Wi-Fi event handler
 static void wifi_event_handler(void *arg, esp_event_base_t event_base,
                                int32_t event_id, void *event_data)
 {
@@ -93,15 +107,29 @@ static void wifi_event_handler(void *arg, esp_event_base_t event_base,
     }
 }
 
+/**
+ * @brief Initialize Wi-Fi station mode.
+ *
+ * This function initializes the Wi-Fi station mode by creating an event group for Wi-Fi connection status,
+ * creating the default Wi-Fi station interface, and registering Wi-Fi event handlers.
+ * It also configures the Wi-Fi station mode with the provided SSID, password, and authentication mode.
+ * After initialization, it waits until the Wi-Fi connection is established or fails.
+ *
+ * @note This function should be called before any other Wi-Fi-related functions.
+ */
 void wifi_init_sta(void)
 {
+    // Create event group for Wi-Fi connection status
     s_wifi_event_group = xEventGroupCreate();
 
+    // Create default Wi-Fi station interface
     esp_netif_create_default_wifi_sta();
 
+    // Initialize Wi-Fi with default configuration
     wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
     ESP_ERROR_CHECK(esp_wifi_init(&cfg));
 
+    // Register Wi-Fi event handlers
     esp_event_handler_instance_t instance_any_id;
     esp_event_handler_instance_t instance_got_ip;
     ESP_ERROR_CHECK(esp_event_handler_instance_register(WIFI_EVENT,
@@ -115,15 +143,11 @@ void wifi_init_sta(void)
                                                         NULL,
                                                         &instance_got_ip));
 
+    // Configure Wi-Fi station mode
     wifi_config_t wifi_config = {
         .sta = {
             .ssid = EXAMPLE_ESP_WIFI_SSID,
             .password = EXAMPLE_ESP_WIFI_PASS,
-            /* Authmode threshold resets to WPA2 as default if password matches WPA2 standards (pasword len => 8).
-             * If you want to connect the device to deprecated WEP/WPA networks, Please set the threshold value
-             * to WIFI_AUTH_WEP/WIFI_AUTH_WPA_PSK and set the password with length and format matching to
-             * WIFI_AUTH_WEP/WIFI_AUTH_WPA_PSK standards.
-             */
             .threshold.authmode = ESP_WIFI_SCAN_AUTH_MODE_THRESHOLD,
             .sae_pwe_h2e = ESP_WIFI_SAE_MODE,
             .sae_h2e_identifier = EXAMPLE_H2E_IDENTIFIER,
@@ -135,16 +159,14 @@ void wifi_init_sta(void)
 
     ESP_LOGI(TAG, "wifi_init_sta finished.");
 
-    /* Waiting until either the connection is established (WIFI_CONNECTED_BIT) or connection failed for the maximum
-     * number of re-tries (WIFI_FAIL_BIT). The bits are set by wifi_event_handler() (see above) */
+    // Wait until Wi-Fi connection is established or connection fails
     EventBits_t bits = xEventGroupWaitBits(s_wifi_event_group,
                                            WIFI_CONNECTED_BIT | WIFI_FAIL_BIT,
                                            pdFALSE,
                                            pdFALSE,
                                            portMAX_DELAY);
 
-    /* xEventGroupWaitBits() returns the bits before the call returned, hence we can test which event actually
-     * happened. */
+    // Check the event that occurred
     if (bits & WIFI_CONNECTED_BIT)
     {
         ESP_LOGI(TAG, "connected to ap SSID:%s password:%s",

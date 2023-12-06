@@ -1,7 +1,4 @@
 menu "WIFI Configuration"
-
-
-
     config ESP_WIFI_SSID
         string "WiFi SSID"
         default "myssid"
@@ -86,6 +83,13 @@ menu "MQTT Configuration"
         bool
         default y if BROKER_URL = "FROM_STDIN"
 
+    config MQTT_KEEPALIVE
+        int "Set MQTT Keepalive time (s)"
+        default 60
+        help
+            The keepalive time for MQTT messages
+
+
     config MQTT_TOPIC_MAIN
         string "Set the MQTT main topic [fixed value for all devices]"
         default "lightstrips"
@@ -104,16 +108,11 @@ menu "MQTT Configuration"
         default "cmd"
         help
             The brodcast and idvidual device command topic for the MQTT messages
-
-
-
-
 endmenu
 
 
 
 menu "LED Strip/Ring Configuration"
-
     config LED_GPIO
         int "LED GPIO"
         default 22
@@ -145,6 +144,5 @@ menu "LED Strip/Ring Configuration"
             bool "SK6812"
 
     endchoice
-
 
 endmenu

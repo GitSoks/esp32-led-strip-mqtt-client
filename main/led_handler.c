@@ -1,18 +1,23 @@
-#include <stdio.h>
-#include <stdint.h>
-#include <stddef.h>
-#include <string.h>
+/**
+ * @file led_handler.c
+ * @brief This file contains the implementation of LED strip handling functions.
+ */
 
-#include "freertos/FreeRTOS.h"
-#include "freertos/task.h"
-#include "freertos/semphr.h"
-#include "freertos/queue.h"
-#include "freertos/event_groups.h"
+#include <stdio.h>  // Standard input/output functions
+#include <stdint.h> // Standard integer types
+#include <stddef.h> // Standard definitions
+#include <string.h> // String manipulation functions
 
-#include "esp_log.h"
-#include "esp_err.h"
+#include "freertos/FreeRTOS.h"     // FreeRTOS library
+#include "freertos/task.h"         // Task management functions
+#include "freertos/semphr.h"       // Semaphore functions
+#include "freertos/queue.h"        // Queue functions
+#include "freertos/event_groups.h" // Event group functions
 
-#include "led_strip.h"
+#include "esp_log.h" // ESP32 logging functions
+#include "esp_err.h" // ESP32 error codes
+
+#include "led_strip.h" // LED strip library
 
 static const char *TAG = "LED_HANDLER";
 
@@ -22,6 +27,13 @@ static const char *TAG = "LED_HANDLER";
 #define CONFIG_LED_MODEL_TYPE LED_MODEL_SK6812
 #endif
 
+/**
+ * @brief Configures the LED strip.
+ *
+ * This function initializes the LED strip according to the provided configuration.
+ *
+ * @return The handle to the configured LED strip.
+ */
 led_strip_handle_t configure_led(void)
 {
     // LED strip general initialization, according to your led board design
