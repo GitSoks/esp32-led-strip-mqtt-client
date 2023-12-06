@@ -70,6 +70,12 @@ endmenu
 
 menu "MQTT Configuration"
 
+    config MQTT_DEVICE_ID
+        string "Set MQTT Device ID  [needs to be unique]"
+        default "device1"
+        help
+            The device id for MQTT messages
+
     config BROKER_URL
         string "Broker URL"
         default "mqtt://192.168.1.10"
@@ -80,29 +86,24 @@ menu "MQTT Configuration"
         bool
         default y if BROKER_URL = "FROM_STDIN"
 
-
     config MQTT_TOPIC_MAIN
-        string "set the MQTT main topic"
-        default "test"
+        string "Set the MQTT main topic [fixed value for all devices]"
+        default "lightstrips"
         help
             The main topic for the MQTT messages
 
-    config MQTT_TOPIC_LED
-        string "set the MQTT led topic (main_topic/leds_topic)"
-        default "leds"
-        help
-            The led topic for the MQTT messages
-    config MQTT_TOPIC_LED_STATE
-            string "set the MQTT led state topic (main_topic/leds_topic/state_topic)"
-            default "state"
+
+    config MQTT_TOPIC_STATE
+            string "Set the MQTT brodcast state topic [fixed value for all devices]"
+            default "sts"
             help
                 The led state topic for the MQTT messages
 
-    config MQTT_TOPIC_LED_COMMAND
-        string "set the MQTT led command topic (main_topic/leds_topic/comand_topic)"
-        default "command"
+    config MQTT_TOPIC_COMMAND
+        string "Set the MQTT command topic [fixed value for all devices]"
+        default "cmd"
         help
-            The led command topic for the MQTT messages
+            The brodcast and idvidual device command topic for the MQTT messages
 
 
 

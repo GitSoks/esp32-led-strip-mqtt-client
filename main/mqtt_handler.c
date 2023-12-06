@@ -28,14 +28,11 @@
 #include "led_strip.h"
 
 #define MQTT_TOPIC_MAIN CONFIG_MQTT_TOPIC_MAIN
-#define MQTT_TOPIC_LED MQTT_TOPIC_MAIN "/" CONFIG_MQTT_TOPIC_LED
-#define MQTT_TOPIC_LED_STATE MQTT_TOPIC_LED "/" CONFIG_MQTT_TOPIC_LED_STATE
-#define MQTT_TOPIC_LED_COMMAND MQTT_TOPIC_LED "/" CONFIG_MQTT_TOPIC_LED_COMMAND
-
-// #define MQTT_TOPIC_MAIN "test"
-// #define MQTT_TOPIC_LED MQTT_TOPIC_MAIN"/leds"
-// #define MQTT_TOPIC_LED_STATE MQTT_TOPIC_LED"/state"
-// #define MQTT_TOPIC_LED_COMMAND MQTT_TOPIC_LED"/command"
+#define MQTT_DEVICE_ID MQTT_TOPIC_MAIN "/" CONFIG_MQTT_DEVICE_ID
+#define MQTT_TOPIC_LAST_WILL MQTT_DEVICE_ID "/last-will"
+#define MQTT_TOPIC_BRODCAST_COMMAND MQTT_TOPIC_MAIN "/" CONFIG_MQTT_TOPIC_COMMAND
+#define MQTT_TOPIC_STATE MQTT_DEVICE_ID "/" CONFIG_MQTT_TOPIC_STATE
+#define MQTT_TOPIC_COMMAND MQTT_DEVICE_ID "/" CONFIG_MQTT_TOPIC_COMMAND
 
 static const char *TAG = "MQTT_HANDLER";
 led_strip_handle_t led_strip;
@@ -59,6 +56,11 @@ void mqtt_publish_led_state(esp_mqtt_client_handle_t client)
 {
     // Output the ledState to the MQTT state topic
     cJSON *stateJson = cJSON_CreateObject();
+    cJSON *deviceId = cJSON_CreateString(CONFIG_MQTT_DEVICE_ID);
+    cJSON_AddItemToObject(stateJson, "device-id", deviceId);
+    cJSON *lights = cJSON_CreateObject();
+
+    cJSON_AddItemToObject(stateJson, "lights", lights);
     if (stateJson != NULL)
     {
         for (int i = 0; i < CONFIG_LED_COUNT; i++)
@@ -71,7 +73,7 @@ void mqtt_publish_led_state(esp_mqtt_client_handle_t client)
                 cJSON_AddNumberToObject(ledJson, "blue", ledStates[i].blue);
                 char n[5];                                    // Declare the variable 'n' with an appropriate size
                 sprintf(n, "%d", i);                          // Initialize the variable 'n' with the value of 'i'
-                cJSON_AddItemToObject(stateJson, n, ledJson); // Use 'n' instead of 'sprint(n)'
+                cJSON_AddItemToObject(lights, n, ledJson);    // Use 'n' instead of 'sprint(n)'
             }
         }
 
@@ -79,22 +81,40 @@ void mqtt_publish_led_state(esp_mqtt_client_handle_t client)
         if (stateJsonStr != NULL)
         {
             // Publish the stateJsonStr to the MQTT state topic
-            esp_mqtt_client_enqueue(client, MQTT_TOPIC_LED_STATE, stateJsonStr, strlen(stateJsonStr), 2, 1, false);
+            esp_mqtt_client_enqueue(client, MQTT_TOPIC_STATE, stateJsonStr, strlen(stateJsonStr), 2, 1, false);
             free(stateJsonStr);
         }
 
         cJSON_Delete(stateJson);
     }
+
+    char ledCount[6];
+    snprintf(ledCount, sizeof(ledCount), "%d", CONFIG_LED_COUNT);
+    esp_mqtt_client_enqueue(client, MQTT_DEVICE_ID "/lights/count", ledCount, 0, 2, 1, false);
+    esp_mqtt_client_enqueue(client, MQTT_DEVICE_ID "/lights/type", "WS2812", 0, 2, 1, false);
 }
 
 void led_output_json_parser(esp_mqtt_client_handle_t client, esp_mqtt_event_handle_t event)
 {
+
+    // Extract the color data
+    cJSON *root = cJSON_Parse(event->data);
+
+    if (cJSON_IsString(root))
+    {
+        if (strcmp(root->valuestring, "update") == 0)
+        {
+            printf("Update command received, sending state\r\n");
+            mqtt_publish_led_state(client);
+            return;
+        }
+        printf("string is not matching\r\n");
+    }
+
     int redValue = 0;
     int greenValue = 0;
     int blueValue = 0;
 
-    // Extract the color data
-    cJSON *root = cJSON_Parse(event->data);
     if (root != NULL)
     {
         cJSON *red = cJSON_GetObjectItemCaseSensitive(root, "red");
@@ -120,6 +140,7 @@ void led_output_json_parser(esp_mqtt_client_handle_t client, esp_mqtt_event_hand
     else
     {
         printf("Failed to parse JSON data\r\n");
+        return;
     }
 
     // Extract the number after the "/"
@@ -191,15 +212,23 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
     case MQTT_EVENT_CONNECTED:
         ESP_LOGI(TAG, "MQTT_EVENT_CONNECTED");
 
-        char topic[50];
+        char topic[100];
 
+        esp_mqtt_client_enqueue(client, MQTT_TOPIC_LAST_WILL, "online", 0, 2, 1, false);
+
+        esp_mqtt_client_subscribe(client, MQTT_TOPIC_BRODCAST_COMMAND, 2);
+        esp_mqtt_client_subscribe(client, MQTT_TOPIC_COMMAND, 2);
         for (int i = 0; i < CONFIG_LED_COUNT; i++)
         {
-            snprintf(topic, sizeof(topic), "%s/%d", MQTT_TOPIC_LED_COMMAND, i);
+            snprintf(topic, sizeof(topic), "%s/%d", MQTT_TOPIC_COMMAND, i);
+            esp_mqtt_client_subscribe(client, topic, 2);
+            snprintf(topic, sizeof(topic), "%s/%d", MQTT_TOPIC_BRODCAST_COMMAND, i);
             esp_mqtt_client_subscribe(client, topic, 2);
         }
 
-        snprintf(topic, sizeof(topic), "%s/all", MQTT_TOPIC_LED_COMMAND);
+        snprintf(topic, sizeof(topic), "%s/all", MQTT_TOPIC_COMMAND);
+        esp_mqtt_client_subscribe(client, topic, 2);
+        snprintf(topic, sizeof(topic), "%s/all", MQTT_TOPIC_BRODCAST_COMMAND);
         esp_mqtt_client_subscribe(client, topic, 2);
 
         break;
@@ -220,9 +249,9 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
         ESP_LOGI(TAG, "MQTT_EVENT_DATA");
         printf("TOPIC=%.*s\r\n", event->topic_len, event->topic);
         printf("DATA=%.*s\r\n", event->data_len, event->data);
-        // Check if the topic contains MQTT_TOPIC_LED_COMMAND
+        // Check if the topic contains MQTT_TOPIC_COMMAND
 
-        if (strstr(event->topic, MQTT_TOPIC_LED_COMMAND) != NULL)
+        if (strstr(event->topic, MQTT_TOPIC_COMMAND) != NULL || strstr(event->topic, MQTT_TOPIC_BRODCAST_COMMAND) != NULL)
         {
             // Handle the LED command
             led_output_json_parser(client, event);
@@ -255,7 +284,15 @@ void mqtt_app_start(led_strip_handle_t strip)
 
     esp_mqtt_client_config_t mqtt_cfg = {
         .broker.address.uri = CONFIG_BROKER_URL,
+        .session.last_will = {
+            .topic = MQTT_TOPIC_LAST_WILL,
+            .qos = 2,
+            .retain = true,
+            .msg_len = 7,
+            .msg = "offline"},
+        .session.keepalive = 2,
     };
+
 #if CONFIG_BROKER_URL_FROM_STDIN
     char line[128];
 
@@ -293,11 +330,6 @@ void mqtt_app_start(led_strip_handle_t strip)
 
     esp_mqtt_client_register_event(client, ESP_EVENT_ANY_ID, mqtt_event_handler, NULL);
     esp_mqtt_client_start(client);
-
-    char ledCount[6];
-    snprintf(ledCount, sizeof(ledCount), "%d", CONFIG_LED_COUNT);
-    esp_mqtt_client_enqueue(client, MQTT_TOPIC_LED "/count", ledCount, 0, 2, 1, false);
-    esp_mqtt_client_enqueue(client, MQTT_TOPIC_LED "/type", "WS2812", 0, 2, 1, false);
 
     // Initialize the ledStates array
     for (int i = 0; i < CONFIG_LED_COUNT; i++)

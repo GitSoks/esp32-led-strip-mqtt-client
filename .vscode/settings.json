@@ -14,7 +14,13 @@
     "thread": "c",
     "xlocale": "c",
     "sockets.h": "c",
-    "err.h": "c"
+    "err.h": "c",
+    "array": "c",
+    "vector": "c",
+    "xstring": "c",
+    "xutility": "c",
+    "random": "c",
+    "chrono": "c"
   },
   "vsmqtt.brokerProfiles": [
     {
