@@ -137,12 +137,6 @@ void mqtt_publish_led_state(esp_mqtt_client_handle_t client)
 
         cJSON_Delete(stateJson);
     }
-
-    // Publish the LED count and type to MQTT topics
-    char ledCount[6];
-    snprintf(ledCount, sizeof(ledCount), "%d", CONFIG_LED_COUNT);
-    esp_mqtt_client_enqueue(client, MQTT_DEVICE_ID "/lights/count", ledCount, 0, 2, 1, false);
-    esp_mqtt_client_enqueue(client, MQTT_DEVICE_ID "/lights/type", "WS2812", 0, 2, 1, false);
 }
 
 /**
@@ -227,12 +221,12 @@ void led_output_json_parser(esp_mqtt_client_handle_t client, esp_mqtt_event_hand
                         }
                         else
                         {
-                            ESP_LOGW(TAG, "Invalid LED number");
+                            ESP_LOGD(TAG, "Invalid LED number");
                         }
                     }
                     else
                     {
-                        ESP_LOGW(TAG, "Invalid LED data");
+                        ESP_LOGD(TAG, "Invalid LED data");
                     }
                 }
 
@@ -241,19 +235,19 @@ void led_output_json_parser(esp_mqtt_client_handle_t client, esp_mqtt_event_hand
             }
             else
             {
-                ESP_LOGW(TAG, "Device ID does not match");
+                ESP_LOGD(TAG, "Device ID does not match");
             }
         }
         else
         {
-            ESP_LOGW(TAG, "Invalid JSON data");
+            ESP_LOGD(TAG, "Invalid JSON data");
         }
 
         cJSON_Delete(root);
     }
     else
     {
-        ESP_LOGW(TAG, "Failed to parse JSON data");
+        ESP_LOGD(TAG, "Failed to parse JSON data");
     }
 }
 /**
@@ -405,6 +399,12 @@ void mqtt_app_start(led_strip_handle_t strip)
         ledStates[i].green = 0;
         ledStates[i].blue = 0;
     }
+
+    // Publish the LED count and type to MQTT topics
+    char ledCount[6];
+    snprintf(ledCount, sizeof(ledCount), "%d", CONFIG_LED_COUNT);
+    esp_mqtt_client_enqueue(client, MQTT_DEVICE_ID "/lights/count", ledCount, 0, 2, 1, false);
+    esp_mqtt_client_enqueue(client, MQTT_DEVICE_ID "/lights/type", "WS2812", 0, 2, 1, false);
 
     // Publish the LED state to the MQTT state topic
     mqtt_publish_led_state(client);
