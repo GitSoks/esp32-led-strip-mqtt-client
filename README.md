@@ -66,7 +66,7 @@ The project can be configured by using esp-idf's `idf.py menuconfig` command. Th
 - LED strip GPIO pin
 - ...
 
-<img src="media/menuconfig.png" alt="menuconfig" width="40%">
+<img src="media/menuconfig.png" alt="menuconfig" width="70%">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -99,8 +99,7 @@ Please refer to the [mqtt-led-controller-ui](https://github.com/GitSoks/mqtt-led
 ## Components & Libraries
 The project uses the `espressif__led_strip` component from the `managed_components` directory. This component provides a driver for addressable LEDs like WS2812. It supports both RMT and SPI backends, and it has various configuration options such as the number of LEDs, the LED pixel format, and the LED model. More information about this component can be found in the espressif__led_strip README.md file.
 
-The project also uses the following standard ESP-IDF components:
-- `esp_netif`
+The project also uses among others the following included standard components and libraries:
 - `esp_wifi`
 - `esp_event`
 - `nvs_flash`
@@ -108,9 +107,7 @@ The project also uses the following standard ESP-IDF components:
 - `json`
 - `log`
 - `freertos`
-- `driver`
-...
-
+- ...
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Contact
