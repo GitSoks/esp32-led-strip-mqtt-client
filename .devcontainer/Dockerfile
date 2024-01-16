@@ -1,4 +1,4 @@
-FROM espressif/idf
+FROM espressif/idf:release-v5.2
 
 ARG DEBIAN_FRONTEND=nointeractive
 ARG CONTAINER_USER=esp
@@ -17,6 +17,10 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 
 RUN update-alternatives --install /usr/local/bin/usbip usbip `ls /usr/lib/linux-tools/*/usbip | tail -n1` 20
+
+# Install ESP-ADF 
+ENV ADF_PATH /opt/esp/esp-adf
+RUN git clone -b v2.6 --recursive https://github.com/espressif/esp-adf.git $ADF_PATH
 
 # QEMU
 ENV QEMU_REL=esp-develop-20220919
