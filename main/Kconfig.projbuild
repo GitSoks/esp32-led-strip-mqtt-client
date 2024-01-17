@@ -68,7 +68,7 @@ endmenu
 menu "MQTT Configuration"
 
     config MQTT_DEVICE_ID
-        string "Set MQTT Device ID  [needs to be unique]"
+        string "Set MQTT Device ID  [needs to be unique for each device]"
         default "device1"
         help
             The device id for MQTT messages
@@ -91,20 +91,20 @@ menu "MQTT Configuration"
 
 
     config MQTT_TOPIC_MAIN
-        string "Set the MQTT main topic [fixed value for all devices]"
+        string "Set the MQTT main topic [needs to be the same for all devices]"
         default "lightstrips"
         help
             The main topic for the MQTT messages
 
 
     config MQTT_TOPIC_STATE
-            string "Set the MQTT brodcast state topic [fixed value for all devices]"
+            string "Set the MQTT brodcast state topic [does not need to be changed]"
             default "sts"
             help
                 The led state topic for the MQTT messages
 
     config MQTT_TOPIC_COMMAND
-        string "Set the MQTT command topic [fixed value for all devices]"
+        string "Set the MQTT command topic [does not need to be changed]"
         default "cmd"
         help
             The brodcast and idvidual device command topic for the MQTT messages
