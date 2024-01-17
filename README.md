@@ -11,12 +11,11 @@ The ESP32 board is programmed to connect to a WiFi network and then to a MQTT br
 - [Table of Contents](#table-of-contents)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
-  - [Using Github Codespaces with ESP-IDF (Optional)](#using-github-codespaces-with-esp-idf-optional)
-  - [Installation](#installation)
+  - [Option 1: Using Github Codespaces](#option-1-using-github-codespaces)
+  - [Option 2: Local Installation](#option-2-local-installation)
 - [Configuration](#configuration)
 - [Usage](#usage)
-- [GUI Controller](#gui-controller)
-  - [Using the GUI Controller](#using-the-gui-controller)
+- [UI Controller](#ui-controller)
 - [Components & Libraries](#components--libraries)
 - [Contact](#contact)
 - [Acknowledgments](#acknowledgments)
@@ -49,7 +48,7 @@ To do so, follow these steps:
 5. Run the `idf.py build` command to build the project.
 6. Flash the firmware to your ESP32 board using the `idf.py flash` command.
 
-
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Configuration
 The following configuration project specific options are **important** and have to be configured before building the project:
@@ -106,12 +105,9 @@ For debugging and testing purposes, I recommend using [MQTT Explorer](https://mq
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## GUI Controller
+## UI Controller
 
-This project can be controlled using a GUI application available at [mqtt-led-controller-ui](https://github.com/GitSoks/mqtt-led-controller-ui). This application provides a user-friendly interface for sending color commands to the MQTT broker.
-
-
-### Using the GUI Controller
+This project can be controlled using a UI application available at [mqtt-led-controller-ui](https://github.com/GitSoks/mqtt-led-controller-ui). This application provides a user-friendly interface for sending color commands to the MQTT broker.
 
 1. Refer to the [mqtt-led-controller-ui](https://github.com/GitSoks/mqtt-led-controller-ui) repository for instructions on how to run the GUI application.
 2. In the application, enter the details of your MQTT broker and the topic (`MQTT_TOPIC_MAIN`) that the ESP32 board is subscribed to.
