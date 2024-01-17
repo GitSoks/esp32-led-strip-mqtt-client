@@ -93,7 +93,6 @@ The following message will set the color of led 0 to white, led 1 to blue, and l
       "green": 255,
       "blue": 0
     },
-    ...
     "1": {
       "red": 0,
       "green": 0,
