@@ -14,7 +14,7 @@ The LED strip used in this project is a WS2812 strip, which is a type of address
   - [Prerequisites](#prerequisites)
   - [Using Github Codespaces with ESP-IDF (Optional)](#using-github-codespaces-with-esp-idf-optional)
   - [Installation](#installation)
-  - [Configuration](#configuration)
+- [Configuration](#configuration)
 - [Usage](#usage)
 - [GUI Controller](#gui-controller)
   - [Using the GUI Controller](#using-the-gui-controller)
@@ -26,35 +26,31 @@ The LED strip used in this project is a WS2812 strip, which is a type of address
 ## Getting Started
 
 ### Prerequisites
-- ESP-IDF version 5.1 or above (installation instructions can be found [here](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html))
 - An ESP32 development board
 - A WS2812 LED strip
 - A MQTT broker
 - A WiFi network
 
-### Using Github Codespaces with ESP-IDF (Optional)
-This project can be run in a Github Codespace with an already configured ESP-IDF Deveelopment Environment. To do so, follow these steps:
+### Option 1: Using Github Codespaces
+This project can be run in a Github Codespace with an already configured ESP-IDF Deveelopment Environment where you can build and flash the firmware to your ESP32 board directly from the browser. This is a great option if you don't want to install ESP-IDF on your local machine. To use this option, you need to have a Github account and a Github Codespaces subscription.
+
+To do so, follow these steps:
 1. Create a Github Codespace using the `main` branch of this repository.
 2. Install [ESP Updater](https://marketplace.visualstudio.com/items?itemName=masuidrive.vsc-esp-updater) extension from the VS Code Marketplace.
-3. Press `Ctrl+Shift+P` to open the command palette and run `Start ESP Updater on Browser` to uploud the firmware to the ESP32 board from the browser.
+4. Run the `idf.py menuconfig` command to configure the project. See the [Configuration](#configuration) section for more details.
+5. Run the `idf.py build` command to build the project.
+6. Press `Ctrl+Shift+P` to open the command palette and run `Start ESP Updater on Browser` to upload the firmware to the ESP32 board from the browser.
 
 
-### Installation
-1. Clone this repository to your local machine.
-2. Navigate to the project directory.
-3. Run the `idf.py menuconfig` command to configure the project.
-4. Run the `idf.py build` command to build the project.
-5. Flash the firmware to your ESP32 board using the `idf.py flash` command.
+### Option 2: Local Installation
+1. Make sure that you have installed the [ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html) development framework.
+2. Clone this repository to your local machine using `git clone htttps://github.com/GitSoks/esp32-led-strip-mqtt-client.git`.
+3. Navigate to the project directory.
+4. Run the `idf.py menuconfig` command to configure the project. See the [Configuration](#configuration) section for more details.
+5. Run the `idf.py build` command to build the project.
+6. Flash the firmware to your ESP32 board using the `idf.py flash` command.
 
-### Configuration
-The project can be configured by using esp-idf's `idf.py menuconfig` command. The following configuration project spcific options are available and need to be configured:
-- WiFi SSID and password
-- MQTT broker URL, port, username, and password
-- MQTT topic to subscribe to
-- LED strip configuration options such as the number of LEDs, the LED pixel format, and the LED model
-- LED strip backend (RMT or SPI)
-- LED strip GPIO pin
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ## Configuration
 The project can be configured by using esp-idf's `idf.py menuconfig` command. The following configuration project specific options are available and need to be configured:
@@ -64,7 +60,6 @@ The project can be configured by using esp-idf's `idf.py menuconfig` command. Th
 - MQTT topic to subscribe to
 - LED strip configuration options such as the number of LEDs, the LED pixel format, and the LED model
 - LED strip GPIO pin
-- ...
 
 <img src="media/menuconfig.png" alt="menuconfig" width="70%">
 
